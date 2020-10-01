@@ -94,7 +94,7 @@ a self-signed Certificate Authority.
    CA_KEY_PASSWORD=SOME_PASSWORD_FOR_CA_KEY
 
    openssl genrsa \
-     -des3 \
+     -sha256 \
      -out ca.key \
      -passout pass:${CA_KEY_PASSWORD} \
      4096
@@ -142,7 +142,7 @@ If you want to generate your own certificates (for example, from the self-signed
    DECK_KEY_PASSWORD=SOME_PASSWORD_FOR_DECK_KEY
 
    openssl genrsa \
-     -des3 \
+     -sha256 \
      -out deck.key \
      -passout pass:${DECK_KEY_PASSWORD} \
      4096
@@ -219,7 +219,7 @@ If you want to generate your own certificates (for example, from the self-signed
    GATE_KEY_PASSWORD=SOME_PASSWORD_FOR_GATE_KEY
 
    openssl genrsa \
-     -des3 \
+     -sha256 \
      -out gate.key \
      -passout pass:${GATE_KEY_PASSWORD} \
      4096
@@ -801,7 +801,7 @@ If you created a self-signed CA, you can use that CA to sign certificates for yo
    CLIENT_PASSWORD=SOME_CLIENT_PASSPHRASE
 
    openssl genrsa \
-     -des3 \
+     -sha256 \
      -out client.key \
      -passout pass:${CLIENT_PASSWORD} \
      4096
@@ -978,7 +978,7 @@ Here's an example of how to use this:
    CLIENT_PASSWORD=SOME_CLIENT_PASSPHRASE
 
    openssl genrsa \
-     -des3 \
+     -sha256 \
      -out client.key \
      -passout pass:${CLIENT_PASSWORD} \
      4096
